@@ -1,0 +1,36 @@
+{
+  "name": "dsh-feiyu-mood",
+  "version": "0.1.0",
+  "description": "A decaying mood state for DeepSeek Harness agents: events push valence/arousal, time pulls them back, and the current mood rides in the system prompt.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./engine": "./lib/mood-engine.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "persona",
+    "mood"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
