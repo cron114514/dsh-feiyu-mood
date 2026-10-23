@@ -22,7 +22,7 @@
 
 ```powershell
 # 1) 放到 DSH 的插件目录
-git clone https://github.com/<you>/dsh-feiyu-mood "$env:USERPROFILE\.dsh\plugins\dsh-feiyu-mood"
+git clone https://github.com/cron114514/dsh-feiyu-mood "$env:USERPROFILE\.dsh\plugins\dsh-feiyu-mood"
 
 # 2) 让 profile 把本包当作 link 依赖（在 profile 目录执行）
 cd "$env:USERPROFILE\.dsh\profiles\desktop"
@@ -90,7 +90,7 @@ pnpm install
 ## 开发
 
 ```powershell
-node --test test/            # 纯逻辑 + 假 ctx 的装配测试
+node --test
 ```
 
 `lib/mood-engine.mjs` 是纯函数（无 I/O、无 DSH 依赖），`lib/state-store.mjs` 只管落盘，`lib/index.js` 只做装配。
