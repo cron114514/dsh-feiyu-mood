@@ -1,0 +1,14 @@
+# dsh-feiyu-mood 的 bundle patch。
+#
+# entry 的 id 只是 loader 的行标识（不是 settings 命名空间——本插件没有声明
+# Config，所以不出现在「设置」里，配置请写在本行的 config 下）。
+- insert:
+    - id: feiyu-mood
+      name: dsh-feiyu-mood
+      config:
+        enabled: true
+        halfLifeMinutes: 45
+        baselineValence: 0.15
+        baselineArousal: 0.4
+        promptOrder: 9050
+        promptMaxChars: 700
